@@ -1,0 +1,95 @@
+git fetch
+Get latest changes from remote origin.
+----------------------------------------------------------------------------------------
+git log --oneline
+Show commit history with limited details
+----------------------------------------------------------------------------------------
+git add .
+Add all the files to stage
+----------------------------------------------------------------------------------------
+git clean -df
+    -d Remove untracket directories also in addition to untracked files
+    -f Force
+    Discard untracked changes
+----------------------------------------------------------------------------------------
+git commit -m "commit message"
+Commit the changes
+----------------------------------------------------------------------------------------
+git push
+Push the changes to remote origin
+----------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------
+git remote show origin
+Shows the remote configured origin
+----------------------------------------------------------------------------------------
+git remote -v
+empty if remote is not configured
+
+
+
+----------------------------------------------------------------------------------------
+git config --list
+List all config options
+----------------------------------------------------------------------------------------
+git config user.name
+Show currently logged in user name.
+----------------------------------------------------------------------------------------
+git remote add <name> <url>
+Add a remote
+----------------------------------------------------------------------------------------
+git push --set-upstream dev master
+Set upstream and push the code
+----------------------------------------------------------------------------------------
+------------------  Branch   -----------------------------------------------------------
+----------------------------------------------------------------------------------------
+git branch
+Shows the current branch
+----------------------------------------------------------------------------------------
+git branch <iss53>
+git checkout <iss53>
+git checkout -b 'BranchName'
+Create branch with name given and point head to that.
+----------------------------------------------------------------------------------------
+git checkout master
+git merge hotfix
+Merging hotfix into master.
+----------------------------------------------------------------------------------------
+git checkout hotfix
+git merge master
+Merge master into hotfix branch.
+    After merge if there are any conflicts fix them and do
+    git commit   
+    no message is needed for this commit because it is a merge commit.
+----------------------------------------------------------------------------------------
+git branch -d hotfix
+Delete hotfix branch after merge.
+----------------------------------------------------------------------------------------
+git mergetool
+Fires up an appropriate visual merge tool and walks you through the conflicts
+----------------------------------------------------------------------------------------
+git branch -vv
+very verbose, details about the commit also
+----------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------
+------------------------------    Pull Request        ----------------------------------
+----------------------------------------------------------------------------------------
+Base branch is the branch you would like to merge your changes into.
+Compare branch is the topic branch which contains your changes.
+----------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------
+--------------------------    Undo a Merge         -------------------------------------
+-------    https://www.git-tower.com/learn/git/faq/undo-git-merge/
+----------------------------------------------------------------------------------------
+----------- If merge is not already pushed the merge to remote repo
+git reset --hard <commit-before-merge hash>
+    give hash of the commit
+(or)
+git reset --hard HEAD~1
+    "HEAD~1" tells git to go back to the commit before the current HEAD revision.
+    --hard option means that any local changes in your working copy will be discarded
+----------------------------------------------------------------------------------------
+----------- If
+git revert -m 1 <merge-commit-hash>
+    git revert will make sure that a new commit is created to revert the effects of that unwanted merge.
+git push
+----------------------------------------------------------------------------------------
