@@ -48,7 +48,10 @@ Shows the current branch
 git branch <iss53>
 git checkout <iss53>
 git checkout -b 'BranchName'
+git push -u origin 'BranchName'
+
 Create branch with name given and point head to that.
+
 ----------------------------------------------------------------------------------------
 git checkout master
 git merge hotfix
